@@ -1,0 +1,20 @@
+<template>
+<theHeader/>
+<h1>tes</h1>
+</template>
+
+<script setup lang="ts">
+useHead({
+  title: 'My Apxxp',
+  meta: [
+    { name: 'description', content: 'My amazing site.' }
+  ],
+  bodyAttrs: {
+    class: 'test'
+  },
+  script: [ { innerHTML: 'console.log(\'Hello world\')' } ]
+})
+</script>
+
+<style>
+</style>
