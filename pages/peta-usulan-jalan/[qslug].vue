@@ -1,51 +1,34 @@
-<script setup lang="ts">
-//A DASHBOARD 
-
-const config = useRuntimeConfig();
+<script lang="ts" setup>
+//analisis usulan jalan
 
 definePageMeta({ 
     layout: 'laydashboard',
-    middleware: ['authenticated-login-musthave', 'prepage1']
-});
-
-useHead({
-    title: config.public.website_title_head + ' Dashboard',
+    middleware: ['authenticated-login-musthave', 'prepage4']
 });
 
 const requestOptions = {
     method: 'GET',
     headers: {},
     body: JSON.stringify( {} ),
-}
+};
 
 //const { data : prox } = await useFetch('https://fakestoreapi.com/products')
 //const { data : prox } = await useFetch('https://api.rrams2023a.my.id/master_kategori_b101', requestOptions)
 
-//const { data : prox } = await useFetch('https://api.rrams2023a.my.id/master_kategori_b101')
-//console.log(prox)
-//console.log(prox.data)
+//const { data : prox } = await useFetch('https://api.rrams2023a.my.id/master_kategori_b101');
+//console.log(prox);
+//console.log(prox.data);
 
-
-/*
-    export default {
-    async fetch(){
-        this.kolom = await fetch('https://api.rrams2023a.my.id/master_kategori_b201', {
-            method: 'POST', body: JSON.stringify({'id': 'xxx'})
-            }).then((res) => res.json)
-    },
-    data(){
-        return {
-            kolom: []
-        }
-    }
-    }
-*/
+//const selectedColor = useSelectedColor();
+//selectedColor.value = 'yyyy'
 
 </script>
 
 <template>
         
-    <div class="p-3 bg-white flex-fill aveo-x1-beranda">
+    <div class="p-3 bg-white flex-fill aveo-x1-beranda" >
+        
+        
         
         
         

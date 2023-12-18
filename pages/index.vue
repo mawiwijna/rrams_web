@@ -1,4 +1,25 @@
-<script>
+<script lang="ts" setup>
+
+definePageMeta({
+    middleware: ['authenticated-login-cannothave']
+});
+
+const userStore = useUserStore();
+
+const signIn = async () => {
+    await userStore.signIn({
+        username: 'kminchelle',
+        password: '0lelplR',
+    })
+    
+    await navigateTo("/dashboard", { replace: true })
+};
+
+const vt_email = ref('kminchelle');
+const vt_password = ref('0lelplR');
+
+
+/*
     export default {
         name: 'LoginForm',
         data() {
@@ -15,13 +36,13 @@
           }
         }
     };
-
+*/
 </script>
 
 <template>
 <nuxt-layout name="laylogin">
     
-    <div class="container-fluid min-vh-100 d-flex flex-column loginarea" style="background: url(https://test-sipasti.rajawali.cloud/assets/img/template/bg.jpg) no-repeat fixed; background-size: cover;">
+    <div class="container-fluid min-vh-100 d-flex flex-column login-bg">
     <div class="row justify-content-center">
 
                 <div class="col-12 col-md-4">
@@ -31,7 +52,7 @@
                         <div class="d-flex flex-row justify-content-center">
                         <div class="p-2">
                             <a href="javascript:void(0)" class="" style="">
-                            <img class="loginarea-logo1" src="https://test-sipasti.rajawali.cloud/assets/img/template/logo2.png" alt="SmartAdmin WebApp" aria-roledescription="logo">
+                            <img class="loginarea-logo1" src="~/assets/ximg1/logo_dir1_v2.png" alt="SmartAdmin WebApp" aria-roledescription="logo">
                             </a>
                         </div>
                         <div class="p-2 loginarea-h">
@@ -49,12 +70,12 @@
                         <div class="card p-4 rounded-plus bg-faded">
                             <h2 class="fs-xxl fw-500 mt-4 text-center" style="color:#3066BE;"></h2>
                             
-                            <form @submit.prevent="handleSubmit">
-                            <div class="form-group">
+                            <form @submit.prevent="signIn">
+                            <div class="form-group mb-5">
                                 <div class="row">
                                     <label class="control-label col-md-12 col-sm-12 col-xs-12">Surat Elektronik (Email) <span style="color: red;">* </span><span style="color: red;" id="result"></span></label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <input v-model="loger.email" type="email" id="username2" class="form-control" name="email" placeholder="Masukkan Alamat Email Anda" required="">
+                                        <input v-model="vt_email" type="text" id="username2" class="form-control" name="email" placeholder="Masukkan Alamat Email Anda" required="">
                                         <div class="help-block" id="error_email" style="display: none;color:red;"></div>
                                     </div>
 
@@ -65,7 +86,7 @@
                                 <div class="row">
                                     <label class="control-label col-md-12 col-sm-12 col-xs-12">kata sandi <span style="color: red;">*</span></label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <input v-model="loger.passw" type="password" id="password2" class="form-control" placeholder="Masukkan Kata Sandi Anda" required="">
+                                        <input v-model="vt_password" type="password" id="password2" class="form-control" placeholder="Masukkan Kata Sandi Anda" required="">
                                         <div class="help-block" id="error_password" style="display: none;color:red;"></div>
                                     </div>
                                 </div>

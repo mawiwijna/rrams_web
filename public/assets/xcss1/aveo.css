@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'primetime';
+    src: url('primetime.eot');
+    src: url('primetime.eot?#iefix') format('embedded-opentype'),
+        url('primetime.woff2') format('woff2'),
+        url('primetime.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
 
 body {
     font-family: 'Inter', sans-serif;
@@ -23,8 +34,32 @@ a.btn {
     border-radius: 12px!important;
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: #089595;
+    border-color: #089595;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #056666;
+    border-color: #056666;
+}
+
+.btn-light {
+    border: 1px solid #D9D9D9;
+}
+
+select.form-control { font-size: 14px; }
+
+.height-tiptap { height: 200px; overflow-y: auto; }
+
 /* -------------------------------------------------- */
 /* -------------------------------------------------- */
+
+.login-bg {
+    background: url('../ximg1/sipastibg.jpg') no-repeat fixed;
+    background-size: cover;
+}
 
 .loginarea {
     background: url('../ximg1/bg01.jpg');
@@ -36,6 +71,8 @@ img.loginarea-logo1 {
 
 .loginarea-h h1 { font-size: 12px; margin-bottom: 0; }
 .loginarea-h h2 { font-size: 12px; color: rgb(8, 149, 149); }
+
+
 
 /* -------------------------------------------------- */
 /* -------------------------------------------------- */
@@ -84,13 +121,183 @@ img.loginarea-logo1 {
 }
 
 .aveo-v1-logo1 .text1 {
-    font-family: "PRIMETIME-Regular", Helvetica;
-    font-weight: 400;
-    color: #340794;
+    font-family: primetime, Helvetica;
+    color: #089595;
     font-size: 28px;
-    letter-spacing: -0.42px;
+    font-style: normal;
+    font-weight: 400;
     line-height: normal;
+    letter-spacing: -0.42px;
 }
+
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+
+.aveo-offcanvas-a-entire {
+    min-width: 480px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aveo-offcanvas-a-entire hr { margin: 0; border-color: #EAECF0; }
+
+.aveo-offcanvas-a-icon1 {
+    border-radius: 9px;
+    border: 1px solid #EAECF0;
+    
+    width: 48px;
+    padding: 9px 10px 11px 10px;
+}
+
+.aveo-offcanvas-a-entire a {
+    color: #000; text-decoration: none;
+}
+
+.aveo-offcanvas-a-topdesc span {
+    display: block;
+}
+.aveo-offcanvas-a-topdesc span:first-child {
+    font-weight: 600;
+}
+
+.aveo-offcanvas-a-area2 {
+    position: relative;
+}
+
+.aveo-offcanvas-a-area2-close {
+    /*
+    bottom: 0; position: absolute;
+    */
+    margin-top: auto;
+}
+
+span.aveo-offcanvas-a-href1 {
+    color: #000; font-weight: 600;
+}
+
+.aveo-offcanvas-a-entire .btn {
+    font-size: 14px;
+}
+
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+
+.file-upload {
+  background-color: #ffffff;
+  /* width: 600px; */
+  margin: 0 auto;
+  /*
+  padding: 20px; */
+}
+
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #1FB264;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+  margin-top: 20px;
+  border: 1px dashed #D9D9D9;
+  position: relative;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+  background-color: #1FB264;
+  border: 1px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+  padding: 10px;
+}
+
+.drag-text h3 {
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #15824B;
+  padding: 60px 0;
+}
+
+.file-upload-image {
+  max-height: 200px;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.remove-image {
+  width: 200px;
+  margin: 0;
+  color: #fff;
+  background: #cd4535;
+  border: none;
+  padding: 10px;
+  border-radius: 1px;
+  border-bottom: 1px solid #b02818;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
 
 ul.aveo-v1-list li span.aveo-x1 {
     width: fit-content;
@@ -108,7 +315,7 @@ ul.aveo-v1-list li a {
     font-weight: normal;
 }
 ul.aveo-v1-list li.active a {
-    color: #340794;
+    color: #089595;
     font-weight: normal;
 }
 
@@ -223,7 +430,7 @@ ul.aveo-v1-list li.active a {
 
 .aveo-x2-breadcrumb a {
     font-weight: 400;
-    color: #340794;
+    color: #089595;
     font-size: 16px;
     letter-spacing: 0.15px;
     line-height: 24px;
@@ -237,7 +444,7 @@ ul.aveo-v1-list li.active a {
     padding: 4px;
     position: relative;
     flex: 0 0 auto;
-    background-color: #340794;
+    background-color: #089595;
     border-radius: 100px;
     overflow: hidden;
 }
@@ -307,7 +514,7 @@ ul.aveo-v1-list li.active a {
 .aveo-x2-infopublish .ellipse {
     width: 4px;
     height: 4px;
-    background-color: #340794;
+    background-color: #089595;
     border-radius: 2px;
     align-self: center;
 }
@@ -322,7 +529,7 @@ ul.aveo-v1-list li.active a {
     line-height: normal;
 }
 .aveo-x2-infopublish .text-1 {
-    color: #340794;
+    color: #089595;
 }
 .aveo-x2-infopublish .text-2 {
     font-weight: 500;
@@ -365,7 +572,7 @@ ul.aveo-v1-list li.active a {
 .aveo-x1-listertengah .info .ellipse {
     width: 4px;
     height: 4px;
-    background-color: #340794;
+    background-color: #089595;
     border-radius: 2px;
     align-self: center;
 }
@@ -375,7 +582,7 @@ ul.aveo-v1-list li.active a {
     width: fit-content;
     margin-top: -1px;
     font-weight: 600;
-    color: #340794;
+    color: #089595;
     font-size: 12px;
     letter-spacing: 0;
     line-height: normal;
@@ -402,7 +609,7 @@ ul.aveo-v1-list li.active a {
 .aveo-x1-listersimilar .info .ellipse {
     width: 4px;
     height: 4px;
-    background-color: #340794;
+    background-color: #089595;
     border-radius: 2px;
     align-self: center;
 }
@@ -412,7 +619,7 @@ ul.aveo-v1-list li.active a {
     width: fit-content;
     margin-top: -1px;
     font-weight: 600;
-    color: #340794;
+    color: #089595;
     font-size: 12px;
     letter-spacing: 0;
     line-height: normal;
@@ -458,8 +665,8 @@ ul.aveo-v1-list li.active a {
 
 .pagination .page-item + .active > .page-link {
     border-radius: 100px!important;
-    background-color: #340794;
-    border-color: #340794;
+    background-color: #089595;
+    border-color: #089595;
 }
 
 @media (max-width: 479px){
@@ -576,7 +783,7 @@ ul.aveo-v1-list li.active a {
   margin-top: -0.5px;
   font-family: "PRIMETIME-Regular", Helvetica;
   font-weight: 400;
-  color: #340794;
+  color: #089595;
   font-size: 28px;
   letter-spacing: -0.42px;
   line-height: normal;
@@ -619,7 +826,7 @@ ul.aveo-v1-list li.active a {
   position: relative;
   width: 5px;
   height: 20px;
-  background-color: #340794;
+  background-color: #089595;
   border-radius: 0px 3px 3px 0px;
 }
 
@@ -646,7 +853,7 @@ ul.aveo-v1-list li.active a {
   width: fit-content;
   font-family: "Inter", Helvetica;
   font-weight: 500;
-  color: #340794;
+  color: #089595;
   font-size: 16px;
   letter-spacing: 0;
   line-height: normal;
@@ -978,7 +1185,7 @@ ul.aveo-v1-list li.active a {
   margin-top: -1px;
   font-family: "Inter", Helvetica;
   font-weight: 400;
-  color: #340794;
+  color: #089595;
   font-size: 14px;
   letter-spacing: 0;
   line-height: 28px;
@@ -1082,7 +1289,7 @@ ul.aveo-v1-list li.active a {
   height: 40px;
   top: 0;
   left: 0;
-  background-color: #340794;
+  background-color: #089595;
   border-radius: 28px;
   opacity: 0.1;
 }
@@ -1093,7 +1300,7 @@ ul.aveo-v1-list li.active a {
   height: 24px;
   top: 8px;
   left: 8px;
-  background-color: #340794;
+  background-color: #089595;
   border-radius: 28px;
   opacity: 0.2;
 }
@@ -1104,7 +1311,7 @@ ul.aveo-v1-list li.active a {
   height: 8px;
   top: 16px;
   left: 16px;
-  background-color: #340794;
+  background-color: #089595;
   border-radius: 28px;
 }
 
@@ -1250,7 +1457,7 @@ ul.aveo-v1-list li.active a {
   margin-top: -1px;
   font-family: "Inter", Helvetica;
   font-weight: 400;
-  color: #340794;
+  color: #089595;
   font-size: 15px;
   letter-spacing: 0;
   line-height: 28px;
